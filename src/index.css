@@ -40,6 +40,8 @@ header{
   display: flex;
   flex-direction: column;
   margin: 30px 0px;
+  justify-content: center;
+  align-items: center;
 }
 
 .titlePresupuesto{
@@ -50,10 +52,6 @@ header{
 
 .containerInput{
   background-color: rgb(255, 255, 255);
-  /* padding: 40px 30px; */
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
   width: 60%;
   margin: auto;
   padding: 80px 0;
@@ -79,7 +77,32 @@ header{
   outline: none;
   border: none;
   font-family: 'Lato', sans-serif;
-  color: wheat; 
+  color: rgb(255, 255, 255); 
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.btn-primary:hover{
+  background-color: rgb(136, 243, 132);
+  transition: .3s;
+}
+
+.error-msg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px 0; */
+}
+
+.error{
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(228, 81, 130);
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  color: rgb(124, 44, 44); 
+  font-weight: bold;
+  /* text-transform: uppercase; */
 }
