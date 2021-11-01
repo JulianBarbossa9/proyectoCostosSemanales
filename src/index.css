@@ -8,9 +8,10 @@
   display: grid;
   max-width: 100%;
   grid-template-areas: "header header"
-                       "presupuesto presupuesto";
+                       "presupuesto presupuesto"
+                       "containerPresupuesto containerPresupuesto";
   grid-template-columns: 50% 50%;
-  grid-template-rows: 120px 400px;
+  grid-template-rows: 120px 400px 800px;
 }
 
 body{
@@ -105,4 +106,52 @@ header{
   color: rgb(124, 44, 44); 
   font-weight: bold;
   /* text-transform: uppercase; */
+}
+
+.containerPresupuesto{
+  grid-area:containerPresupuesto;
+  background-color: rgb(255, 255, 255);
+  width: 60%;
+  margin: auto;
+  padding: 80px 0;
+  border-radius: 30px;
+  color: #3880be;
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-between;
+ 
+}
+
+.column-1{
+  /* border: 2px solid red; */
+  margin: 0 80px;
+  width: 500px;
+  height: 450px;
+}
+
+.column-2{
+ 
+  border: 2px solid red;
+  width: auto;
+  height: auto;
+  margin: 0 80px;
+  width: 500px;
+  height: 450px;
+}
+
+.campo{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.inputIni{
+  /* width: auto; */
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  /* outline: none; */
+  border: none;
+  border: 1px solid rgb(62, 117, 189);
 }
