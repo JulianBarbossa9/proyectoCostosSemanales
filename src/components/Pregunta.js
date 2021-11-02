@@ -4,7 +4,7 @@ import Error from './Error';
 
 
 
-const Pregunta = ({guardarPresupuesto, guardarRestante}) => {
+const Pregunta = ({guardarPresupuesto, guardarRestante, actualizarPregunta}) => {
    
    /**
     * Definir el state
@@ -43,6 +43,7 @@ const Pregunta = ({guardarPresupuesto, guardarRestante}) => {
        // Que se hace si pasa la validación 
         guardarPresupuesto(cantidad);
         guardarRestante(cantidad);
+        actualizarPregunta(false); 
    }
 
     return (  
