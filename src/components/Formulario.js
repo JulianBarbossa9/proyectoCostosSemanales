@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Error from './Error';
+import {v4 as uuidv4} from 'uuid';// npm i uuid
 
 
 
@@ -8,21 +9,28 @@ const Formulario = () => {
 
     const [nombre, guardarNombre] = useState('');// Podria ser un objeto
     const [cantidad, guardarCantidad] = useState(0);
-    const [error, guardarError] = useState(false)
+    const [error, guardarError] = useState(false); 
 
     // Cuando el usuario agrega el gasto
     const agregarGasto = e => {
         e.preventDefault();
 
-        //validar infor
+        //validar infor = isNaN(is not a number)
         if(cantidad < 1 || isNaN(cantidad) || nombre.trim() === ''){
             guardarError(true);
-            return 
+            return;
         }
 
+        guardarError(false);
 
         // construir gasto (objeto)
+        const gastos = {
+            nombre,
+            cantidad,
+            id: uuidv4()
+        }
 
+        console.log(gastos);
 
         //Pasar el gasto al coponente principal
     }

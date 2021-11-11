@@ -63,7 +63,7 @@ const Pregunta = ({guardarPresupuesto, guardarRestante, actualizarPregunta}) => 
                             <input
                                 type="number"
                                 className="presupuestoIni"
-                                placeholder="Digite su presupuesto"
+                                placeholder=" Digite su presupuesto"
                                 onChange = {definiPresupuesto}
                             />
 
