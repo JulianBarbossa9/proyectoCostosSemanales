@@ -14,8 +14,8 @@ function App() {
   const [ restante , guardarRestante ] = useState(0); 
   const [ mostrarpregunta, actualizarPregunta] = useState(true);
   const [ gastos, guardarGastos] = useState([]);
-  const [ gasto , gurdarGasto] = useState({});
-  const [ creargasto, guardarCrearGasto] = useState(false);
+  const [ gasto , gurdarGasto] = useState({});//
+  const [ creargasto, guardarCrearGasto] = useState(false);//
 
     /**
     * Use effect que actualize el restante 
@@ -23,6 +23,8 @@ function App() {
 
     useEffect(()=> {
       if(creargasto){
+
+        //Agrega el nuevo presupuesto 
         guardarGastos([
           ...gastos,
           gasto
@@ -35,7 +37,7 @@ function App() {
         // Resetear a false
         guardarCrearGasto(false);
       }
-    },[gasto]);
+    },[gasto, creargasto, gastos, restante]);
 
 
     //Cuando agreguemos un nuevo costo

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Gasto = ({gasto}) => (
     <div className="container-listaGastos">
@@ -11,4 +12,9 @@ const Gasto = ({gasto}) => (
     </div>
 );
  
+
+Gasto.propTypes = {
+    gasto: PropTypes.object.isRequired
+}
+
 export default Gasto;

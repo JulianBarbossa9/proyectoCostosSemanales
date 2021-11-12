@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error';
 import {v4 as uuidv4} from 'uuid';// npm i uuid
 
@@ -78,5 +79,11 @@ const Formulario = ({ gurdarGasto, guardarCrearGasto}) => {
         </form>
      );
 }
+
+Formulario.propTypes = {
+    gurdarGasto: PropTypes.func.isRequired,
+    guardarCrearGasto: PropTypes.func.isRequired
+}
+
  
 export default Formulario;

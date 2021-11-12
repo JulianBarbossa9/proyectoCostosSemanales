@@ -197,3 +197,16 @@ header{
 .restante{
   background-color: aliceblue;
 }
+
+.alert-danger{
+  background-color: rgb(202, 99, 99);
+  color: white;
+}
+
+.alert-warning{
+  background-color: rgb(223, 223, 121);
+}
+
+.alert-succes{
+  background-color: #66c075;
+}
