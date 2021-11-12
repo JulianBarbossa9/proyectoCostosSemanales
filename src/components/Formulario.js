@@ -5,11 +5,13 @@ import {v4 as uuidv4} from 'uuid';// npm i uuid
 
 
 
-const Formulario = () => {
+const Formulario = ({ gurdarGasto, guardarCrearGasto}) => {
 
     const [nombre, guardarNombre] = useState('');// Podria ser un objeto
     const [cantidad, guardarCantidad] = useState(0);
     const [error, guardarError] = useState(false); 
+    
+
 
     // Cuando el usuario agrega el gasto
     const agregarGasto = e => {
@@ -30,9 +32,14 @@ const Formulario = () => {
             id: uuidv4()
         }
 
-        console.log(gastos);
+        // console.log(gastos);
 
         //Pasar el gasto al coponente principal
+        gurdarGasto(gastos);
+        guardarCrearGasto(true);
+        // resetear el form
+        guardarNombre('');
+        guardarCantidad(0);
     }
 
     return ( 
@@ -46,7 +53,7 @@ const Formulario = () => {
                 <input
                     type="text"
                     className="inputIni"
-                    placeholder="Ej. Transporte"
+                    placeholder=" Ej. Transporte"
                     value={nombre}
                     onChange={e => guardarNombre(e.target.value)}
                 />
@@ -57,12 +64,12 @@ const Formulario = () => {
                 <input
                     type="number"
                     className="inputIni"
-                    placeholder="Ej. $2.000"
+                    placeholder=" Ej. $2.000"
                     value={cantidad}
-                    onChange={e => guardarCantidad(parseInt(e.target.value),10)}
+                    onChange={e => guardarCantidad(parseInt(e.target.value),1000)}
                 />
             </div>
-
+            
             <input
                 type="submit"
                 className="btn-prin"

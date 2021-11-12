@@ -135,8 +135,7 @@ header{
 }
 
 .column-2{
- 
-  border: 2px solid red;
+
   width: auto;
   height: auto;
   margin: 0 80px;
@@ -178,4 +177,23 @@ header{
 .btn-prin:hover{
   background-color: rgb(136, 243, 132);
   transition: .3s;
+}
+
+.container-listaGastos{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-position: inside;
+}
+
+.gasto-saldo{
+  margin: 10px 30px;
+}
+
+.alert-principla{
+  background-color: aliceblue;
+}
+
+.restante{
+  background-color: aliceblue;
 }
